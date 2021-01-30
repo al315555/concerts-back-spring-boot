@@ -53,24 +53,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-			      <groupId>com.spotify</groupId>
-			      <artifactId>docker-maven-plugin</artifactId>
-
-			      <configuration>
-				<imageName>usermanagementservice</imageName>
-				<baseImage>openjdk:8-jre-alpine</baseImage>
-				<entryPoint>["java", "-jar", "/concertback.jar"]</entryPoint>
-				<!-- copy the service's jar file from target into the root directory of the image --> 
-				<resources>
-				   <resource>
-				     <targetPath>/</targetPath>
-				     <directory>/</directory>
-				     <include>concertback.jar</include>
-				   </resource>
-				</resources>
-			      </configuration>
-			 </plugin>
+			
 		</plugins>
 		
 	</build>
